@@ -1,12 +1,8 @@
 package assessment.core
 
+import scala.util.parsing.combinator.JavaTokenParsers
+
 object Calculator {
-
-  abstract class Expr
-  case class Val(value : Double) extends Expr
-  case class UnOp(operator : String, operand : Expr) extends Expr
-  case class BiOp(operator : String, lhs : Expr, rhs : Expr) extends Expr
-
 
   def simplify(expr: Expr) : Expr = {
     def collect(e : Expr) = e match {

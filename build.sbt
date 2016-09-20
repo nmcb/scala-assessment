@@ -25,6 +25,12 @@ libraryDependencies ++= {
       ExclusionRule("asm") // exclude because of conflict creating test report with PegDown
     ),
 
+    // https://mvnrepository.com/artifact/com.twitter/bijection-core_2.10
+    // seems to also be able to perform future conversion.
+    //
+    // "com.twitter" % "bijection-core_2.11" % "0.9.2",
+    // "com.twitter" % "bijection-util_2.11" % "0.9.2",
+
     "com.typesafe.akka" %% "akka-actor" % akkaVersion,
     "com.typesafe.akka" %% "akka-slf4j"  % akkaVersion,
     "com.typesafe.akka" %% "akka-testkit" % akkaVersion % "test",

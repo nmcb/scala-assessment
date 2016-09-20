@@ -1,7 +1,5 @@
 package assessment.core
 
-package core
-
 import akka.actor.{ActorSystem, Props}
 
 trait Core {

@@ -4,7 +4,7 @@ import akka.actor.{Actor, Props}
 import akka.pattern.ask
 import akka.util.Timeout
 import assessment.core.CalculatorActor
-import assessment.core.core.{BootedCore, CoreActors}
+import assessment.core.{BootedCore, CoreActors}
 
 import scala.concurrent.duration.DurationDouble
 
@@ -15,11 +15,10 @@ object CLI extends CoreActors with BootedCore {
     implicit val timeout = Timeout(5 seconds)
 
     def receive: Receive = {
-      case cmd: CalculatorActor.Req  => (calculator ? cmd).mapTo[CalculatorActor.Res].foreach(println)
-      case _         =>
+      case cmd: CalculatorActor.Request  => (calculator ? cmd).mapTo[Any].foreach(println)
+      case cmd: Any                      => println("Unknown command:" + cmd.toString)
     }
-  }
+  }a
 
-  val repl = system.actorOf(Props[Repl], "repl")
-}
+  val cli = system.actorOf(Props[Repl], "cli")
 }
