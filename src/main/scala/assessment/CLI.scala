@@ -18,7 +18,7 @@ object CLI extends CoreActors with BootedCore {
       case cmd: CalculatorActor.Request  => (calculator ? cmd).mapTo[Any].foreach(println)
       case cmd: Any                      => println("Unknown command:" + cmd.toString)
     }
-  }a
+  }
 
   val cli = system.actorOf(Props[Repl], "cli")
 }
