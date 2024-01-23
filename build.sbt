@@ -51,7 +51,7 @@ libraryDependencies ++= {
     "com.twitter.inject" %% "inject-app" % finatraVersion % "test",
     "com.twitter.inject" %% "inject-core" % finatraVersion % "test",
     "com.twitter.inject" %% "inject-modules" % finatraVersion % "test",
-    "com.google.inject.extensions" % "guice-testlib" % "4.0" % "test",
+    "com.google.inject.extensions" % "guice-testlib" % "4.2.3" % "test",
 
     "com.twitter.finatra" %% "finatra-http" % finatraVersion % "test" classifier "tests",
     "com.twitter.finatra" %% "finatra-jackson" % finatraVersion % "test" classifier "tests",
