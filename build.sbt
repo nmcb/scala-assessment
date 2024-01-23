@@ -12,7 +12,7 @@ resolvers += "twttr" at "https://maven.twttr.com/"
 libraryDependencies ++= {
   val akkaVersion     = "2.4.2"
   val scalaTestVersion = "2.2.3"
-  val finatraVersion = "2.1.4"
+  val finatraVersion = "2.1.6"
 
   Seq(
     "org.scala-lang" % "scala-reflect" % scalaVersion.value,
