@@ -41,7 +41,7 @@ libraryDependencies ++= {
     "org.scalacheck" %% "scalacheck" % "1.12.4" % "test", // needed by scalatest for property based tests
     "org.testng" % "testng" % "6.8.21" % "test",
     "org.hamcrest" % "hamcrest-all" % "1.3" % "test",
-    "org.mockito" % "mockito-core" % "2.0.43-beta" % "test",
+    "org.mockito" % "mockito-core" % "2.0.111-beta" % "test",
     "com.novocode" % "junit-interface" % "0.11" % "test",
 
     // Finatra test utils -- The Full Monty. All is needed.
