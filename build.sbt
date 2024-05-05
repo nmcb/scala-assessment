@@ -10,9 +10,9 @@ scalaVersion := "2.11.12" // upgraded from 2.11.7 iot. use ammonite
 resolvers += "twttr" at "https://maven.twttr.com/"
 
 libraryDependencies ++= {
-  val akkaVersion     = "2.4.2"
+  val akkaVersion      = "2.4.2"
   val scalaTestVersion = "2.2.6"
-  val finatraVersion = "2.1.4"
+  val finatraVersion   = "2.1.6"
 
   Seq(
     "org.scala-lang" % "scala-reflect" % scalaVersion.value,
