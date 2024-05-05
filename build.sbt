@@ -4,14 +4,14 @@ organization := "assessment"
 
 version := "1.0.0"
 
-scalaVersion := "2.11.8" // upgraded from 2.11.7 iot. use ammonite
+scalaVersion := "2.11.12" // upgraded from 2.11.7 iot. use ammonite
 
 // Twitter Server
 resolvers += "twttr" at "https://maven.twttr.com/"
 
 libraryDependencies ++= {
   val akkaVersion     = "2.4.2"
-  val scalaTestVersion = "2.2.3"
+  val scalaTestVersion = "2.2.6"
   val finatraVersion = "2.1.4"
 
   Seq(
@@ -21,7 +21,7 @@ libraryDependencies ++= {
     "com.twitter.finatra" %% "finatra-http" % finatraVersion,
     "com.twitter.finatra" %% "finatra-httpclient" % finatraVersion,
     "com.twitter.finatra" %% "finatra-slf4j" % finatraVersion,
-    "com.twitter" %% "finagle-stats" % "6.33.0" excludeAll(
+    "com.twitter" %% "finagle-stats" % "6.45.0" excludeAll(
       ExclusionRule("asm") // exclude because of conflict creating test report with PegDown
     ),
 
@@ -37,12 +37,12 @@ libraryDependencies ++= {
 
       // Test
     "org.scalatest" % "scalatest_2.11" % scalaTestVersion % "test",
-    "org.pegdown" % "pegdown" % "1.4.2" % "test",         // needed by scalatest for html report
-    "org.scalacheck" %% "scalacheck" % "1.12.4" % "test", // needed by scalatest for property based tests
+    "org.pegdown" % "pegdown" % "1.6.0" % "test",         // needed by scalatest for html report
+    "org.scalacheck" %% "scalacheck" % "1.12.6" % "test", // needed by scalatest for property based tests
     "org.testng" % "testng" % "6.8.21" % "test",
     "org.hamcrest" % "hamcrest-all" % "1.3" % "test",
     "org.mockito" % "mockito-core" % "2.0.111-beta" % "test",
-    "com.novocode" % "junit-interface" % "0.11" % "test",
+    "com.github.sbt" % "junit-interface" % "0.13.3" % "test",
 
     // Finatra test utils -- The Full Monty. All is needed.
     "com.twitter.finatra" %% "finatra-http" % finatraVersion % "test",
@@ -51,7 +51,7 @@ libraryDependencies ++= {
     "com.twitter.inject" %% "inject-app" % finatraVersion % "test",
     "com.twitter.inject" %% "inject-core" % finatraVersion % "test",
     "com.twitter.inject" %% "inject-modules" % finatraVersion % "test",
-    "com.google.inject.extensions" % "guice-testlib" % "4.0" % "test",
+    "com.google.inject.extensions" % "guice-testlib" % "4.2.3" % "test",
 
     "com.twitter.finatra" %% "finatra-http" % finatraVersion % "test" classifier "tests",
     "com.twitter.finatra" %% "finatra-jackson" % finatraVersion % "test" classifier "tests",
@@ -59,6 +59,6 @@ libraryDependencies ++= {
     "com.twitter.inject" %% "inject-core" % finatraVersion % "test" classifier "tests",
     "com.twitter.inject" %% "inject-modules" % finatraVersion % "test" classifier "tests",
     "com.twitter.inject" %% "inject-server" % finatraVersion % "test" classifier "tests",
-    "org.specs2" %% "specs2-mock" % "3.7.2" % "test"
+    "org.specs2" %% "specs2-mock" % "3.7.3" % "test"
   )
 }
