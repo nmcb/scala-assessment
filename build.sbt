@@ -59,6 +59,6 @@ libraryDependencies ++= {
     "com.twitter.inject" %% "inject-core" % finatraVersion % "test" classifier "tests",
     "com.twitter.inject" %% "inject-modules" % finatraVersion % "test" classifier "tests",
     "com.twitter.inject" %% "inject-server" % finatraVersion % "test" classifier "tests",
-    "org.specs2" %% "specs2-mock" % "3.7.3" % "test"
+    "org.specs2" %% "specs2-mock" % "3.10.0" % "test"
   )
 }
