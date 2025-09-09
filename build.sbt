@@ -11,7 +11,7 @@ resolvers += "twttr" at "https://maven.twttr.com/"
 
 libraryDependencies ++= {
   val akkaVersion      = "2.4.2"
-  val scalaTestVersion = "2.2.6"
+  val scalaTestVersion = "3.2.19"
   val finatraVersion   = "2.1.6"
 
   Seq(
