@@ -21,7 +21,7 @@ libraryDependencies ++= {
     "com.twitter.finatra" %% "finatra-http" % finatraVersion,
     "com.twitter.finatra" %% "finatra-httpclient" % finatraVersion,
     "com.twitter.finatra" %% "finatra-slf4j" % finatraVersion,
-    "com.twitter" %% "finagle-stats" % "6.45.0" excludeAll(
+    "com.twitter" %% "finagle-stats" % "24.2.0" excludeAll(
       ExclusionRule("asm") // exclude because of conflict creating test report with PegDown
     ),
 
