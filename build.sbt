@@ -39,7 +39,7 @@ libraryDependencies ++= {
     "org.scalatest" % "scalatest_2.11" % scalaTestVersion % "test",
     "org.pegdown" % "pegdown" % "1.6.0" % "test",         // needed by scalatest for html report
     "org.scalacheck" %% "scalacheck" % "1.19.0" % "test", // needed by scalatest for property based tests
-    "org.testng" % "testng" % "7.11.0" % "test",
+    "org.testng" % "testng" % "7.12.0" % "test",
     "org.hamcrest" % "hamcrest-all" % "1.3" % "test",
     "org.mockito" % "mockito-core" % "5.21.0" % "test",
     "com.github.sbt" % "junit-interface" % "0.13.3" % "test",
