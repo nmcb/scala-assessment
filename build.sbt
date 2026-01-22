@@ -4,7 +4,7 @@ organization := "assessment"
 
 version := "1.0.0"
 
-scalaVersion := "2.13.18" // upgraded from 2.11.7 iot. use ammonite
+scalaVersion := "3.8.1" // upgraded from 2.11.7 iot. use ammonite
 
 // Twitter Server
 resolvers += "twttr" at "https://maven.twttr.com/"
